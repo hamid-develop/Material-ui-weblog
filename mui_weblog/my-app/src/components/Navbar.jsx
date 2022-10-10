@@ -37,51 +37,57 @@ const styles = makeStyles((theme) => ({
       backgroundColor: alpha(theme.palette.common.white, 0.25),
     },
     width: "100%",
-    [theme.breakpoints.down("xs")] : {
-       display : (props) => (props.open ? "flex" : "none"),
-    }
+    [theme.breakpoints.down("xs")]: {
+      display: (props) => (props.open ? "flex" : "none"),
+    },
   },
   input: {
     color: "white",
     marginRight: theme.spacing(2),
+    width: "100%",
   },
   badge: {
-    display : (props) => (props.open ? "none" : "flex"),
+    display: (props) => (props.open ? "none" : "flex"),
     alignItems: "center",
   },
   icon: {
     marginLeft: theme.spacing(2),
   },
   searchIcon: {
-      marginLeft: theme.spacing(2),
-    [theme.breakpoints.up("sm")] : {
-        display: "none",
-    }
+    marginLeft: theme.spacing(2),
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
+    cursor : "pointer",
   },
   cancel: {
-    [theme.breakpoints.up("sm")] : {
-        display: "none",
-    }
-  }
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
+    cursor : "pointer",
+  },
 }));
 
 const Navbar = () => {
-    const [open, setOpen] = useState(false)
-  const classes = styles({open});
+  const [open, setOpen] = useState(false);
+  const classes = styles({ open });
   return (
     <AppBar>
       <Toolbar className={classes.toolbar}>
-        <Typography className={classes.logoLg}>وبلاگ تاپلرن</Typography>
-        <Typography className={classes.logoSm}>تاپلرن</Typography>
+        <Typography className={classes.logoLg}>وبلاگ متریال</Typography>
+        <Typography className={classes.logoSm}>متریال</Typography>
         <Typography>
           <div className={classes.search}>
             <Search />
             <InputBase placeholder="جستجو کنید" className={classes.input} />
-            <Cancel className={classes.cancel} onClick={()=> setOpen(false)} />
+            <Cancel className={classes.cancel} onClick={() => setOpen(false)} />
           </div>
         </Typography>
         <div className={classes.badge}>
-          <Search className={classes.searchIcon} onClick={()=> setOpen(true)} />
+          <Search
+            className={classes.searchIcon}
+            onClick={() => setOpen(true)}
+          />
           <Badge badgeContent={4} color="secondary" className={classes.icon}>
             <Mail />
           </Badge>
