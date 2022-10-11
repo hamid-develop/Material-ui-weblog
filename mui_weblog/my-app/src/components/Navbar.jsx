@@ -47,8 +47,9 @@ const styles = makeStyles((theme) => ({
     width: "100%",
   },
   badge: {
-    display: (props) => (props.open ? "none" : "flex"),
+    display : "flex",
     alignItems: "center",
+    display: (props) => (props.open ? "none" : "flex"),
   },
   icon: {
     marginLeft: theme.spacing(2),

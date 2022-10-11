@@ -1,16 +1,16 @@
 import Navbar from "./components/Navbar";
 import { Grid, makeStyles } from "@material-ui/core";
-import Leftbar from "./components/Leftbar";
 import Feed from "./components/Feed";
+import Leftbar from "./components/Leftbar";
 import Rightbar from "./components/Rightbar";
 
 const style = makeStyles((theme) => ({
-  right: {
+  left: {
     [theme.breakpoints.down("xs")]: {
       display: "none",
     },
   },
-}));
+ }));
 
 function App() {
   const classes = style();
@@ -18,13 +18,13 @@ function App() {
     <div>
       <Navbar />
       <Grid container>
-        <Grid item sm={3} className={classes.right}>
+        <Grid item sm={2} xs={2}>
           <Rightbar />
         </Grid>
         <Grid item sm={7} xs={10}>
           <Feed />
         </Grid>
-        <Grid item sm={2} xs={2}>
+        <Grid item sm={3} className={classes.left}>
           <Leftbar />
         </Grid>
       </Grid>
