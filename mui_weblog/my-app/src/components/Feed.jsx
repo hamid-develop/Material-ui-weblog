@@ -1,8 +1,10 @@
 import { makeStyles, Container } from "@material-ui/core";
+import Post from './Post';
 
 const style = makeStyles((theme) => ({
   container: {
     marginTop: theme.spacing(10),
+   
   },
 }));
 
@@ -10,7 +12,10 @@ const Feed = () => {
   const classes = style();
   return (
     <Container className={classes.container}>
-      <div>قسمت مربوط به پست ها</div>
+     <Post />
+     <Post />
+     <Post />
+     <Post />
     </Container>
   );
 };

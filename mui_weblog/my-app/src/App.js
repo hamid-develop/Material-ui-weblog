@@ -3,6 +3,7 @@ import { Grid, makeStyles } from "@material-ui/core";
 import Feed from "./components/Feed";
 import Leftbar from "./components/Leftbar";
 import Rightbar from "./components/Rightbar";
+import AddPost from "./components/AddPost";
 
 const style = makeStyles((theme) => ({
   left: {
@@ -10,7 +11,7 @@ const style = makeStyles((theme) => ({
       display: "none",
     },
   },
- }));
+}));
 
 function App() {
   const classes = style();
@@ -28,6 +29,7 @@ function App() {
           <Leftbar />
         </Grid>
       </Grid>
+      <AddPost />
     </div>
   );
 }

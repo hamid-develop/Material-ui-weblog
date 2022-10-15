@@ -12,8 +12,11 @@ import {
 
 const style = makeStyles((theme) => ({
   container: {
+    position: "sticky",
+    top: 0,
     height: "100vh",
     paddingTop: theme.spacing(10),
+    border: "1px solid gray",
     [theme.breakpoints.down("xs")] : {
       backgroundColor : theme.palette.primary.main,
       color : "white",

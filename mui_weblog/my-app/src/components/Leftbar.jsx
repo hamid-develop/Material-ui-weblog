@@ -1,4 +1,4 @@
-import { makeStyles, Container } from "@material-ui/core";
+import { makeStyles, Container, TextField } from "@material-ui/core";
 
 const style = makeStyles((theme) => ({
   container: {
@@ -10,7 +10,9 @@ const Leftbar = () => {
   const classes = style();
   return (
     <Container className={classes.container}>
-      <div>منوی سمت چپ</div>
+      <div>
+      <TextField  id="outlined-basic"  variant="outlined" placeholder="نام خانوادگی" />
+      </div>
     </Container>
   );
 };
